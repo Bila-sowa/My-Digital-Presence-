@@ -1,0 +1,430 @@
+/*=========================
+            Res    
+=========================*/
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*=========================
+           Fonts    
+=========================*/
+@font-face {
+    font-family: 'SemataryFonts';
+    src: url('./Fonts/SemataryFonts/oldenglishtextmt.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}  
+/*=========================
+           Fonts    
+=========================*/
+@keyframes Y-Animation{
+    from {
+        transform: translateY(-100px);
+    }
+    to { 
+        transform: translate(0px);
+    }
+}
+@keyframes Y-Animation-ForApp{
+    from {
+        transform: translateY(-10px);
+    }
+    to { 
+        transform: translateY(0px);
+    }
+}
+
+/*=========================
+          Body     
+=========================*/
+body{
+    /*Size*/
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    /*Background*/
+    background: url(./Images/Background.jpg)no-repeat;
+    background-size: cover;
+
+    /*Flex*/
+    display: flex;
+    justify-content: center; /*Horizontal */
+    align-items: center;  /*Vertical*/
+}
+body::before {
+    content: "";
+
+    
+    position: fixed;
+    inset: 0;
+
+    background: linear-gradient(
+        rgba(30, 36, 58, 0.4),
+        rgba(20, 24, 40, 0.5)
+    );
+    /*does not interfere with the app*/
+    z-index: -1;
+}
+
+
+
+/*=========================
+         App/Core          
+=========================*/
+.app{
+    /*Animation*/
+    animation-name: Y-Animation;
+    animation-duration: 2s;
+    animation-timing-function:cubic-bezier(1, 0.7, 0.2);
+
+    transition: 0.8s;
+
+    /*Blur effect*/
+    background: linear-gradient(90deg, rgba(42, 184, 255, 0.1),rgba(42, 184, 255, 0.05));
+    backdrop-filter: blur(10px);
+
+    /*Size*/
+    width: 900px;
+    height: 750px;
+
+    /*Border styling*/
+    border: 2px solid rgba(42, 184, 255, 0.3);
+    outline: 1px solid rgba(42, 184, 255, 0.2);
+    box-shadow: 0px 0px 20px rgba(42, 184, 255, 0.5);
+    border-radius: 1rem;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.app:hover{
+    /*increase*/
+    scale: 1.05;
+}
+
+/*=========================
+     Header Container        
+=========================*/
+.header{
+    /*For correct placement of views*/
+    position: relative;
+
+    /*Size*/
+    width: 100%;
+    height: 170px;
+
+    /* background: linear-gradient(90deg, rgba(33, 145, 201, 0.1),rgba(33, 145, 201, 0.05)); */
+
+    /*Border styling*/
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 1rem 1rem 0px 0px;
+
+    /*Flex*/
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+}
+.header-name{
+    /*Font Decorations*/
+    font-size: 120px;
+    font-family: "SemataryFonts";
+    color: white;
+    text-shadow: 3px 3px 10px black;
+    letter-spacing: 2px;
+    word-spacing: 8px;
+}
+.header-avatar{
+    /*Position*/
+    position: absolute;
+    left: 5%;
+    top: 45%;
+
+    /*Fix position*/
+    transform: translateY(45%);
+
+    /*Size*/
+    width: 120px;
+    height: 120px;
+
+    /*Animations*/
+    transition: all 0.9s ease;
+
+    border-radius: 50%;
+    border: 1.5px solid rgb(255, 255, 255); 
+    box-shadow: 3px 3px 15px black;
+    /* outline: 1px solid rgba(13, 64, 88, 0.5); */ 
+}
+.header-avatar:hover{
+    box-shadow: 0px 0px 15px rgb(255, 255, 255);
+}
+
+
+/*=========================
+     Views-Container      
+=========================*/
+.views-container{
+    /*Position*/
+    position: absolute;
+    top: 15px;
+    right: 20px;
+
+
+    /*Text styling*/
+    color: white;
+    text-shadow: 3px 3px 10px black;
+
+    /*Border styling*/
+    border: 2px solid rgba(42, 184, 255, 0.3);
+    outline: 1px solid rgba(42, 184, 255, 0.2);
+    box-shadow: 0px 0px 20px rgba(42, 184, 255, 0.5);
+    border-radius: 0.5rem;
+    
+    /*Flex*/
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/*=========================
+  Social-links-container       
+=========================*/
+.social-links-container{
+    /*Size*/
+    width: 30%;
+    height: auto;
+    margin-top: 5px;
+    
+    /*Fonts*/
+    font-size: 40px;
+
+    /*Flex*/
+    display: flex;
+    justify-content: space-around;
+}
+
+/*=========================
+         Icons      
+=========================*/
+.icon{
+    /*Shadow*/
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+
+    text-decoration: none;
+    color: rgba(42, 184, 255, 0.7);;
+
+    /*Animations*/
+    transition: all 0.3s ease;
+}
+.icon:hover{
+    text-shadow:  
+    0 0 8px   rgba(42, 184, 255, 0.5),
+    0 0 16px  rgba(42, 184, 255, 0.4),
+    0 0 32px  rgba(42, 184, 255, 0.3);
+}
+
+/*=========================
+         Player   
+=========================*/
+.player{
+    /*Size*/
+    width: 95%;
+    height: 120px;
+
+    /*Position*/
+    margin-top: 300px;
+    
+    /*Border*/
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+
+    /*Flex*/
+    display: flex;
+    flex-wrap: wrap;
+
+    /*Background*/
+    background: rgba(0, 0, 0, 0.2);
+    
+}
+
+.player-np{
+    /*Position*/
+    position: absolute;
+    margin-top: -50px;
+
+    /*Font Decorations*/
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 2px 2px 10px rgb(0, 0, 0);
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.track-icon{
+    /*Positions*/
+    margin: 10px;
+
+    /*Border*/
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 20px rgb(133 181 230);
+
+    /*Size*/
+    width: 100px;
+    height: 100px;
+
+    /*Animations*/
+    transition: all 0.3s ease;
+}
+.track-icon:hover{
+    transform: scale(1.06);
+}
+
+.track-name{
+    /*Font Decorations*/
+    color: rgb(200, 0, 0);
+    text-shadow: 0px 0px 10px rgba(200, 0, 0, 0.3);
+    font-family: "SemataryFonts";
+    font-size: 40px;
+    text-decoration: none;
+
+    /*Size*/
+    width: 705;
+    height: 50px;
+
+    /*one-line structuring*/
+    white-space: nowrap;
+
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
+
+    /*Animations*/
+    transition: all 0.9s ease;
+}
+
+.track-name:hover{
+    text-shadow:  
+    0 0 8px   rgb(200, 0, 0.5),
+    0 0 16px  rgb(200, 0, 0.4),
+    0 0 32px  rgb(200, 0, 0.3);
+}
+
+
+
+.functional{
+    display: flex;
+    position: relative;
+
+    width: 85%;
+
+    top: -50px;
+    left: 15%;
+
+    /* justify-content: space-between; */
+    gap: 10px;
+    align-items: center;
+    /* border: 1px solid rgb(255, 255, 255); */
+}
+.time-slider,.volume-slider,.buttons,.track-time{
+    position: relative;
+}
+
+
+.buttons{
+    display: flex;
+
+    font-size: 25px;
+    color: white;
+    text-shadow: 2px 2px 1px black;
+
+    width: 150px;
+    height: 0 auto;
+
+    /* border: 4px solid snow; */
+    /* top: -50px;
+    left: -100px; */
+    justify-content: space-around; 
+
+}
+
+.button{
+    transition: transform 0.2s ease;
+    transition-property: all;
+}
+
+.button:hover{
+    cursor: pointer;
+    color: gray;
+    text-shadow: 0px 0px 10px rgba(128, 128, 128, 0.5);
+}
+
+.volume-icon{
+    font-size: 25px;
+    color: white;
+    text-shadow: 2px 2px 1px black;
+}
+
+
+.sliders{
+    width: 70%;
+}
+.volume-slider{
+    width: 30%;
+}
+
+.volume-slider,.time-slider {
+    -webkit-appearance: none;
+
+    height: 10px;
+
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+.volume-slider::-webkit-slider-thumb,.time-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+
+    width: 15px;
+    height: 15px;
+
+    background: rgb(200, 0, 0);;
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: transform 0.8s ease;
+    transition-property: all;
+}
+
+
+.volume-slider:hover::-webkit-slider-thumb,.time-slider:hover::-webkit-slider-thumb {
+    box-shadow:  
+    0 0 8px   rgb(200, 0, 0.5),
+    0 0 16px  rgb(200, 0, 0.4),
+    0 0 32px  rgb(200, 0, 0.3);
+}
+
+
+
+.time-slider{
+    width: 60%;
+    /* padding-right: 15px; */
+}
+
+.time-slider,.volume-slider:hover{
+    cursor: pointer;
+
+    
+}
+.track-time{
+    color: white;
+    font-size: 25px;
+    text-shadow: 2px 2px 1px black;
+    
+    /*Position*/
+    margin-left: auto;
+    padding: 0px 15px 0px 0px;
+}
+
