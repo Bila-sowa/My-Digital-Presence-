@@ -45,7 +45,7 @@ body{
     min-height: 100dvh;
 
     /*Background*/
-    background: url(./Images/Background.jpg)no-repeat;
+    background: url(../Images/Background.jpg)no-repeat;
     background-size: cover;
 
     /*Flex*/
