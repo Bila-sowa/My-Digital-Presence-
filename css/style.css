@@ -12,7 +12,7 @@
 =========================*/
 @font-face {
     font-family: 'SemataryFonts';
-    src: url('./Fonts/SemataryFonts/oldenglishtextmt.ttf') format('truetype');
+    src: url('../Fonts/SemataryFonts/oldenglishtextmt.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }  
