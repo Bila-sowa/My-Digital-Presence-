@@ -39,7 +39,7 @@
             
             <!--Views-->
             <div class="views-container">
-                <a class="views-value">0</a>
+                <a class="views-value">17</a>
                 <i class="fa-solid fa-eye views"></i>
             </div>
             
@@ -92,26 +92,25 @@
                 <div class="buttons">
                 
                     <!-- Previous -->
-                    <i class="fa-solid fa-backward button"></i>
+                    <i class="fa-solid fa-backward button button-prev" title="Previous"></i>
                 
                     <!-- Play -->   <!--class="fa-solid fa-pause"-->
-                    <i class="fa-solid fa-play button"></i>
+                    <i class="fa-solid fa-play button button-play" title="Play"></i>
 
                     <!-- Next -->
-                    <i class="fa-solid fa-forward button"></i>
+                    <i class="fa-solid fa-forward button button-next" title="Next"></i>
                 </div>
                 
                 <!-- sliders -->
                 <div class="sliders">
                     <!--Volume-slider-->
                     <i class="fa-solid fa-volume-high volume-icon"></i>
-                    <input type="range" min="0" max="100" value="30" class="volume-slider">
+                    <input type="range" min="0" max="100" value="45" class="volume-slider">
                     <!--time slider-->
                     <input type="range" min="0" max="100" value="0" class="time-slider">
                 </div>
-                <span class="track-time">3:53</span>
-                  
-                
+                <span class="track-time">0:00</span>
+                <audio class="audio-player" preload="metadata"></audio>
                 <script src="./js/script.js"></script>
 
             </div>  
