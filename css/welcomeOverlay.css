@@ -1,0 +1,46 @@
+@import "main.css";
+@import "keyframes.css";
+/*=========================
+     Welcome Overlay       
+=========================*/
+.welcome-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: all 0.8s ease;
+}
+
+.welcome-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+    backdrop-filter: blur(0px);
+}
+.welcome-button {
+    font-size: 32px;
+    font-family: 'SemataryFonts', serif;
+    color: rgba(42, 184, 255, 0.9);
+    background: transparent;
+    border: 2px solid rgba(42, 184, 255, 0.5);
+    padding: 20px 60px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-shadow: 0px 0px 10px rgba(42, 184, 255, 0.3);
+    box-shadow: 0px 0px 20px rgba(42, 184, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.welcome-button:hover {
+    color: rgba(42, 184, 255, 1);
+    border-color: rgba(42, 184, 255, 0.8);
+    box-shadow: 0px 0px 30px rgba(42, 184, 255, 0.6);
+    transform: scale(1.05);
+}
+
+.welcome-button:active {
+    transform: scale(0.98);
+}

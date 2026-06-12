@@ -1,0 +1,90 @@
+@import "main.css";
+@import "keyframes.css";
+/*=========================
+     Header Container        
+=========================*/
+.header{
+    /*For correct placement of views*/
+    position: relative;
+
+    /*Size*/
+    width: 100%;
+    height: 170px;
+
+    /* background: linear-gradient(90deg, rgba(33, 145, 201, 0.1),rgba(33, 145, 201, 0.05)); */
+
+    /*Border styling*/
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 1rem 1rem 0px 0px;
+
+    /*Flex*/
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+}
+.header-name{
+    /*Font Decorations*/
+    font-size: 120px;
+    font-family: "SemataryFonts";
+    color: white;
+    text-shadow: 3px 3px 10px black;
+    letter-spacing: 2px;
+    word-spacing: 8px;
+}
+.header-avatar{
+    /*Position*/
+    position: absolute;
+    left: 5%;
+    top: 45%;
+
+    /*Fix position*/
+    transform: translateY(45%);
+
+    /*Size*/
+    width: 120px;
+    height: 120px;
+
+    /*Animations*/
+    transition: all 0.9s ease;
+
+    border-radius: 50%;
+    border: 1.5px solid rgb(255, 255, 255); 
+    box-shadow: 3px 3px 10px black;
+    /* outline: 1px solid rgba(13, 64, 88, 0.5); */ 
+}
+.header-avatar:hover{
+    box-shadow: 0px 0px 15px rgb(255, 255, 255);
+}
+
+
+/*=========================
+     Views-Container      
+=========================*/
+.views-container{
+    /*Position*/
+    position: absolute;
+    top: 15px;
+    right: 20px;
+
+
+    /*Text styling*/
+    color: white;
+    text-shadow: var(--minimalTextShadow);
+
+    /*Border styling*/
+    border: 2px solid rgba(42, 184, 255, 0.3);
+    outline: 1px solid rgba(42, 184, 255, 0.2);
+    box-shadow: 0px 0px 20px rgba(42, 184, 255, 0.5);
+    border-radius: 0.5rem;
+    
+    /*Flex*/
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.views-container.views-update {
+    animation: viewsPulse 0.8s ease forwards;
+}

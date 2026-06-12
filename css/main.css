@@ -1,0 +1,68 @@
+/*=========================
+            Res    
+=========================*/
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*=========================
+          Root  
+=========================*/
+:root{
+    --blurEffect: linear-gradient(90deg, rgba(42, 184, 255, 0.1),rgba(42, 184, 255, 0.05));
+
+    --redGlow:
+    0 0 8px   rgb(200, 0, 0.5),
+    0 0 16px  rgb(200, 0, 0.4),
+    0 0 32px  rgb(200, 0, 0.3);
+    --blueGlow:
+    0 0 8px   rgba(42, 184, 255, 0.5),
+    0 0 16px  rgba(42, 184, 255, 0.4),
+    0 0 32px  rgba(42, 184, 255, 0.3);
+    --minimalTextShadow: 2px 2px 1px black
+}
+
+
+/*=========================
+           Fonts    
+=========================*/
+@font-face {
+    font-family: 'SemataryFonts';
+    src: url('../Fonts/SemataryFonts/oldenglishtextmt.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}  
+
+/*=========================
+          Body     
+=========================*/
+body{
+    /*Size*/
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    /*Background*/
+    background: url(../Images/Background.jpg)no-repeat;
+    background-size: cover;
+
+    /*Flex*/
+    display: flex;
+    justify-content: center; /*Horizontal */
+    align-items: center;  /*Vertical*/
+}
+body::before {
+    content: "";
+
+    
+    position: fixed;
+    inset: 0;
+
+    background: linear-gradient(
+        rgba(30, 36, 58, 0.4),
+        rgba(20, 24, 40, 0.5)
+    );
+    /*does not interfere with the app*/
+    z-index: -1;
+}
