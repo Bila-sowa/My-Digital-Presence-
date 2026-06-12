@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const tracks = [
         {
-            title: 'SEMATARY - BURYD MY HEART',
+            title: 'SEMATARY - DEAD TREES',
             src: './Music/track.mp3',
-            url: 'https://soundcloud.com/semataryy/09-sematary-buryd-my-heart',
+            url: 'https://soundcloud.com/semataryy/15-sematary-dead-trees-ft',
             image: './Images/PlayerImage.jpg'
         }
     ];
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         isSeeking = true;
         const duration = audio.duration || 0;
         const newTime = (timeSlider.value / 100) * duration;
-        trackTime.textContent = `${formatTime(newTime)} / ${formatTime(duration)}`;
+        trackTime.textContent = `${formatTime(newTime)}`;
     });
 
     timeSlider.addEventListener('change', () => {

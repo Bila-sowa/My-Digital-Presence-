@@ -258,6 +258,9 @@ body::before {
 
     /*Flex*/
     display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+
     flex-wrap: wrap;
 
     /*Background*/
@@ -333,14 +336,14 @@ body::before {
     top: -50px;
     left: 15%;
 
-    /* justify-content: space-between; */
     gap: 10px;
     align-items: center;
-    /* border: 1px solid rgb(255, 255, 255); */
+    flex-wrap: nowrap;
+    white-space: nowrap;
 }
 .time-slider,.volume-slider,.buttons,.track-time{
     position: relative;
-    top: -3px;
+    top: 0;
 }
 
 
@@ -399,9 +402,11 @@ body::before {
 
 .sliders{
     width: 70%;
+    min-width: 260px;
 }
 .volume-slider{
     width: 30%;
+    min-width: 80px;
 }
 
 .volume-slider,.time-slider {
@@ -412,6 +417,7 @@ body::before {
     border: 1px solid rgba(0, 0, 0, 0.4);
     background: rgba(0, 0, 0, 0.2);
     border-radius: 15px;
+    margin: 0;
 }
 
 .volume-slider::-webkit-slider-thumb,.time-slider::-webkit-slider-thumb {
