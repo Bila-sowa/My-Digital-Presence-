@@ -277,6 +277,29 @@ body::before {
     display: flex;
     align-items: center;
     gap: 8px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.views-container.views-update {
+    animation: viewsPulse 0.8s ease forwards;
+}
+
+@keyframes viewsPulse {
+    0% {
+        transform: scale(1);
+        border-color: rgba(42, 184, 255, 0.3);
+        box-shadow: 0px 0px 20px rgba(42, 184, 255, 0.5);
+    }
+    50% {
+        transform: scale(1.08);
+        border-color: rgba(42, 255, 255, 0.9);
+        box-shadow: 0px 0px 35px rgba(42, 255, 255, 0.7);
+    }
+    100% {
+        transform: scale(1);
+        border-color: rgba(42, 184, 255, 0.3);
+        box-shadow: 0px 0px 20px rgba(42, 184, 255, 0.5);
+    }
 }
 
 
@@ -440,10 +463,7 @@ body::before {
     left: -100px; */
 }
 
-.button-prev,
-.button-next {
-    cursor: default;
-}
+
 
 .button-prev:hover,
 .button-next:hover {
@@ -452,7 +472,7 @@ body::before {
 }
 
 .button{
-    transition: transform 0.2s ease;
+    transition: transform 0.5s ease;
     transition-property: all;
     outline: none;
 }

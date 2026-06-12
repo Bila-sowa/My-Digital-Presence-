@@ -10,15 +10,52 @@ document.addEventListener('DOMContentLoaded', () => {
     // Welcome overlay handler
     const welcomeOverlay = document.querySelector('.welcome-overlay');
     const welcomeButton = document.querySelector('.welcome-button');
+    let revealClicked = false;
+
+    const viewsValue = document.querySelector('.views-value');
+    const viewsContainer = document.querySelector('.views-container');
+
+    function startViewsUpdateTimer() {
+        setTimeout(() => {
+            if (viewsValue) {
+                viewsValue.textContent = '18';
+            }
+            if (viewsContainer) {
+                viewsContainer.classList.add('views-update');
+                window.setTimeout(() => {
+                    viewsContainer.classList.remove('views-update');
+                }, 900);
+            }
+        }, 2500);
+    }
 
     if (welcomeButton) {
         welcomeButton.addEventListener('click', () => {
             welcomeOverlay.classList.add('hidden');
+            revealClicked = true;
             audio.play().catch(() => {
                 
             });
+            startViewsUpdateTimer();
         });
     }
+
+    window.addEventListener('keydown', (event) => {
+        if (!revealClicked) return;
+        if (event.code === 'Space' || event.key === ' ') {
+            if (event.target && ['INPUT', 'TEXTAREA', 'SELECT'].includes(event.target.tagName)) {
+                return;
+            }
+            event.preventDefault();
+            if (audio.paused) {
+                audio.play().catch(() => {
+                    
+                });
+            } else {
+                audio.pause();
+            }
+        }
+    });
 
     const tracks = [
         {
