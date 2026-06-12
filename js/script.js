@@ -7,6 +7,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const trackName = document.querySelector('.track-name');
     const trackIcon = document.querySelector('.track-icon');
 
+    // Welcome overlay handler
+    const welcomeOverlay = document.querySelector('.welcome-overlay');
+    const welcomeButton = document.querySelector('.welcome-button');
+
+    if (welcomeButton) {
+        welcomeButton.addEventListener('click', () => {
+            welcomeOverlay.classList.add('hidden');
+            audio.play().catch(() => {
+                
+            });
+        });
+    }
+
     const tracks = [
         {
             title: 'SEMATARY - DEAD TREES',
