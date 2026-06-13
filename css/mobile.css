@@ -77,87 +77,95 @@
 
     .player {
         width: 95%;
-        height: 120px;
-        margin: clamp(80px, 28vw, 300px) auto 0;
-        padding: 0;
+        min-height: 90px;
+        margin: clamp(50px, 18vw, 180px) auto 0;
+        padding: 10px 12px;
         position: relative;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: flex-start;
-    }
-
-    .player-np {
-        position: absolute;
-        margin-top: -50px;
-        left: 2.5%;
-        font-size: clamp(18px, 5vw, 30px);
-        text-align: left;
-        width: auto;
-    }
-
-    .track-icon {
-        width: clamp(70px, 22vw, 100px);
-        height: clamp(70px, 22vw, 100px);
-        margin: 10px;
-        flex-shrink: 0;
-    }
-
-    .track-name {
-        width: auto;
-        max-width: calc(100% - 130px);
-        flex: 1;
-        min-width: 0;
-        height: 50px;
-        font-size: clamp(18px, 5.5vw, 40px);
-        text-align: left;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .functional {
-        position: relative;
-        width: 85%;
-        top: -50px;
-        left: 15%;
+        display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         align-items: center;
         gap: 10px;
+        border-radius: 1rem;
+        background: rgba(0, 0, 0, 0.15);
+    }
+
+    .player-np {
+        display: none;
+    }
+
+    .track-icon {
+        width: clamp(48px, 14vw, 70px);
+        height: clamp(48px, 14vw, 70px);
+        margin: 0;
+        flex-shrink: 0;
+        border-radius: 0.75rem;
+    }
+
+    .track-name {
+        display: none;
+        /* width: auto;
+        max-width: calc(100% - 160px);
+        min-width: 0;
+        height: auto;
+        font-size: clamp(14px, 4vw, 26px);
+        line-height: 1.1;
+        text-align: left;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; */
+    }
+
+    .functional {
+        position: relative;
+        width: 100%;
+        top: 0;
+        left: 0;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
         margin-top: 0;
     }
 
     .buttons {
-        font-size: clamp(18px, 4vw, 25px);
+        font-size: clamp(18px, 4vw, 22px);
         flex-shrink: 0;
     }
 
     .sliders {
-        width: 80%;
+        width: 100%;
         min-width: 0;
         flex: 1;
-        display: block;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
     }
 
     .volume-slider {
-        width: 15%;
-        min-width: 50px;
+        width: 18%;
+        min-width: 40px;
+        height: 8px;
     }
 
     .time-slider {
-        width: 90%;
+        width: 72%;
+        height: 8px;
     }
 
     .track-time {
-        font-size: clamp(16px, 4vw, 25px);
-        margin-left: auto;
-        padding: 0 10px 0 0;
+        font-size: clamp(12px, 3vw, 18px);
+        margin-left: 0;
+        padding: 0 6px 0 0;
         text-align: right;
+        white-space: nowrap;
     }
 
     .welcome-button {
-        font-size: 1.35rem;
-        padding: 16px 32px;
+        font-size: 1.25rem;
+        padding: 14px 28px;
         max-width: calc(100vw - 32px);
     }
 }
@@ -191,38 +199,84 @@
 
     .player {
         width: 95%;
-        margin-top: clamp(60px, 22vw, 120px);
+        min-height: 84px;
+        margin-top: clamp(40px, 16vw, 90px);
+        padding: 10px 10px 10px 12px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        border-radius: 1rem;
+        background: rgba(0, 0, 0, 0.18);
     }
 
     .player-np {
-        font-size: clamp(16px, 4.5vw, 22px);
-        margin-top: -40px;
+        display: none;
     }
 
     .track-icon {
-        width: clamp(56px, 18vw, 80px);
-        height: clamp(56px, 18vw, 80px);
-        margin: 8px;
+        width: clamp(42px, 14vw, 56px);
+        height: clamp(42px, 14vw, 56px);
+        margin: 0;
+        flex-shrink: 0;
+        border-radius: 0.75rem;
     }
 
     .track-name {
-        max-width: calc(100% - 100px);
-        font-size: clamp(14px, 4.5vw, 28px);
+        display: none;
+        /* max-width: calc(100% - 130px);
+        min-width: 0;
+        font-size: clamp(12px, 4vw, 22px);
         height: auto;
+        line-height: 1.1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; */
     }
 
     .functional {
-        top: -40px;
-        left: 10%;
-        width: 88%;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6px;
+        margin: 0;
     }
 
     .buttons {
-        font-size: clamp(16px, 3.5vw, 22px);
+        font-size: clamp(14px, 3.5vw, 18px);
+    }
+
+    .sliders {
+        width: 100%;
+        min-width: 0;
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
     }
 
     .volume-slider {
-        min-width: 40px;
+        width: 20%;
+        min-width: 36px;
+        height: 8px;
+    }
+
+    .time-slider {
+        width: 70%;
+        min-width: 0;
+        height: 8px;
+    }
+
+    .track-time {
+        font-size: clamp(11px, 3vw, 16px);
+        padding: 0 6px 0 0;
+        white-space: nowrap;
     }
 
     .volume-slider,
