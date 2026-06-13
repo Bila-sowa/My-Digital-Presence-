@@ -1,0 +1,267 @@
+/*=========================
+       Mobile Styles
+   (max-width breakpoints)
+=========================*/
+
+@media (max-width: 900px) {
+    body {
+        align-items: center;
+        justify-content: center;
+        padding: max(16px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(16px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
+    }
+
+    .app {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: auto;
+        padding-bottom: 24px;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .app:hover {
+        scale: 1;
+    }
+
+    .header {
+        height: auto;
+        min-height: auto;
+        padding: 44px 12px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .header-name {
+        font-size: clamp(2.5rem, 10vw, 5rem);
+        letter-spacing: 1px;
+        word-spacing: 4px;
+        text-align: center;
+        line-height: 1.1;
+    }
+
+    .header-avatar {
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0);
+        width: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border-width: 0;
+        box-shadow: none;
+        overflow: hidden;
+        pointer-events: none;
+        transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+    }
+
+    .views-container {
+        top: 10px;
+        right: 10px;
+        padding: 4px 8px;
+        font-size: 0.9rem;
+        gap: 6px;
+    }
+
+    .social-links-container {
+        width: 85%;
+        margin: 12px auto 0;
+        font-size: 2rem;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+    }
+
+    .player {
+        width: 95%;
+        height: 120px;
+        margin: clamp(80px, 28vw, 300px) auto 0;
+        padding: 0;
+        position: relative;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .player-np {
+        position: absolute;
+        margin-top: -50px;
+        left: 2.5%;
+        font-size: clamp(18px, 5vw, 30px);
+        text-align: left;
+        width: auto;
+    }
+
+    .track-icon {
+        width: clamp(70px, 22vw, 100px);
+        height: clamp(70px, 22vw, 100px);
+        margin: 10px;
+        flex-shrink: 0;
+    }
+
+    .track-name {
+        width: auto;
+        max-width: calc(100% - 130px);
+        flex: 1;
+        min-width: 0;
+        height: 50px;
+        font-size: clamp(18px, 5.5vw, 40px);
+        text-align: left;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .functional {
+        position: relative;
+        width: 85%;
+        top: -50px;
+        left: 15%;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 10px;
+        margin-top: 0;
+    }
+
+    .buttons {
+        font-size: clamp(18px, 4vw, 25px);
+        flex-shrink: 0;
+    }
+
+    .sliders {
+        width: 80%;
+        min-width: 0;
+        flex: 1;
+        display: block;
+    }
+
+    .volume-slider {
+        width: 15%;
+        min-width: 50px;
+    }
+
+    .time-slider {
+        width: 90%;
+    }
+
+    .track-time {
+        font-size: clamp(16px, 4vw, 25px);
+        margin-left: auto;
+        padding: 0 10px 0 0;
+        text-align: right;
+    }
+
+    .welcome-button {
+        font-size: 1.35rem;
+        padding: 16px 32px;
+        max-width: calc(100vw - 32px);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px 8px;
+    }
+
+    .header {
+        padding: 40px 8px 16px;
+        gap: 10px;
+    }
+
+    .header-name {
+        font-size: clamp(2rem, 12vw, 3rem);
+    }
+
+    .views-container {
+        top: 8px;
+        right: 8px;
+        font-size: 0.8rem;
+        gap: 4px;
+    }
+
+    .social-links-container {
+        width: 95%;
+        font-size: 1.65rem;
+        gap: 10px;
+    }
+
+    .player {
+        width: 95%;
+        margin-top: clamp(60px, 22vw, 120px);
+    }
+
+    .player-np {
+        font-size: clamp(16px, 4.5vw, 22px);
+        margin-top: -40px;
+    }
+
+    .track-icon {
+        width: clamp(56px, 18vw, 80px);
+        height: clamp(56px, 18vw, 80px);
+        margin: 8px;
+    }
+
+    .track-name {
+        max-width: calc(100% - 100px);
+        font-size: clamp(14px, 4.5vw, 28px);
+        height: auto;
+    }
+
+    .functional {
+        top: -40px;
+        left: 10%;
+        width: 88%;
+    }
+
+    .buttons {
+        font-size: clamp(16px, 3.5vw, 22px);
+    }
+
+    .volume-slider {
+        min-width: 40px;
+    }
+
+    .volume-slider,
+    .time-slider {
+        height: 8px;
+    }
+
+    .volume-slider::-webkit-slider-thumb,
+    .time-slider::-webkit-slider-thumb {
+        width: 14px;
+        height: 14px;
+    }
+
+    .track-time {
+        font-size: clamp(14px, 3.5vw, 20px);
+        padding: 0 6px 0 0;
+    }
+
+    .welcome-button {
+        font-size: 1.15rem;
+        padding: 14px 24px;
+    }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+    body {
+        align-items: center;
+        padding: 8px 16px;
+    }
+
+    .app {
+        max-width: 720px;
+    }
+
+    .header {
+        padding: 36px 12px 12px;
+    }
+
+    .player {
+        margin-top: clamp(40px, 15vw, 80px);
+    }
+}
